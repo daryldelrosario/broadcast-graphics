@@ -48,7 +48,7 @@ body {
 }
 
 .gold-bar {
-  position: absollute;
+  position: absolute;
   z-index: 1;
   height: 69px;
   width: 600px;
@@ -57,4 +57,27 @@ body {
   background-size: cover;
   background-position: top right;
   clip-path: polygon(15px 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.black-bar {
+  position: absolute;
+  z-index: 2;
+  height: 70px;
+  width: 585px;
+  max-width: 90vw;
+  background: url(./black.jpg) no-repeat;
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(15px 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.main-bar-text {
+  color: white;
+  font-weight: 600;
+  font-size: 45px;
+  z-index: 3;
+  padding-right: 60px;
+  position: relative;
+  top: 10px;
+  margin-left: 70px;
 }

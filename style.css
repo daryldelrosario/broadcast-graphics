@@ -21,5 +21,15 @@ html {
 }
 
 body {
+  background: rgb(42, 42, 42);
   min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+}
+
+.container {
+  position: absolute;
+  bottom: 200px;
+  left: 35vw;
 }

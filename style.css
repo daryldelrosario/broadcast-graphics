@@ -29,3 +29,32 @@ body {
   bottom: 200px; /* may need to use lower px */
   left: 35vw;
 }
+
+/* LEFT BOX STYLES */
+.left-box {
+  position: absolute;
+  left: -167px;
+  z-index: 10;
+}
+
+.img-container {
+  height: 110px;
+}
+
+/* MAIN BAR CONTAINER STYLES */
+.main-bar-container {
+  position: relative;
+  width: max-content;
+}
+
+.gold-bar {
+  position: absollute;
+  z-index: 1;
+  height: 69px;
+  width: 600px;
+  max-width: calc(90vw + 15px);
+  background: url(./gold.jpg) no-repeat;
+  background-size: cover;
+  background-position: top right;
+  clip-path: polygon(15px 0, 100% 0, 100% 100%, 0% 100%);
+}

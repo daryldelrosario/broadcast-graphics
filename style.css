@@ -10,17 +10,13 @@
   font-style: normal;
 } */
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 html {
+  box-sizing: border-box;
   font-family: "DM Sans", sans-serif;
 }
 
 body {
+  margin: 0;
   background: rgb(42, 42, 42);
   min-height: 100vh;
   overflow: hidden;
@@ -30,6 +26,6 @@ body {
 
 .container {
   position: absolute;
-  bottom: 200px;
+  bottom: 200px; /* may need to use lower px */
   left: 35vw;
 }

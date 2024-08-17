@@ -80,4 +80,7 @@ body {
   position: relative;
   top: 10px;
   margin-left: 70px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

@@ -59,6 +59,7 @@ body {
   background-size: cover;
   background-position: top right;
   clip-path: polygon(0 0, 0 0, 0% 100%, 0% 100%);
+  animation: slideIn 0.5s ease-in-out forwards 0.1s;
 }
 
 .black-bar {
@@ -70,6 +71,7 @@ body {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 0 0, 0% 100%, 0% 100%);
+  animation: slideIn 0.5s ease-in-out forwards 0.2s;
 }
 
 .main-bar-text {
@@ -140,6 +142,17 @@ body {
 
   100% {
     clip-path: polygon(15px 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+/* ANIMATE OUT */
+@keyframes slideOut {
+  0% {
+    clip-path: polygon(15px 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  100% {
+    clip-path: polygon(0 0, 0 0, 0% 100%, 0% 100%);
   }
 }
 

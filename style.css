@@ -39,6 +39,9 @@ body {
 
 .img-container {
   height: 110px;
+  clip-path: inset(0 0 0 100%);
+  opacity: 0;
+  animation: revealLeft 0.5s linear forwards;
 }
 
 /* MAIN BAR CONTAINER STYLES */
@@ -55,7 +58,7 @@ body {
   background: url(./gold.jpg) no-repeat;
   background-size: cover;
   background-position: top right;
-  clip-path: polygon(15px 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 0 0, 0% 100%, 0% 100%);
 }
 
 .black-bar {
@@ -66,7 +69,7 @@ body {
   background: url(./black.jpg) no-repeat;
   background-size: cover;
   background-position: top;
-  clip-path: polygon(15px 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 0 0, 0% 100%, 0% 100%);
 }
 
 .main-bar-text {
@@ -126,4 +129,43 @@ body {
   top: 3px;
   margin-left: 48px;
   padding-right: 30px;
+}
+
+/* MAIN BAR ======= */
+/* ANIMATE IN */
+@keyframes slideIn {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0% 100%, 0% 100%);
+  }
+
+  100% {
+    clip-path: polygon(15px 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+/* LEFT BOX ======= */
+/* ANIMATE IN */
+@keyframes revealLeft {
+  0% {
+    clip-path: inset(0 0 0 100%);
+    opacity: 1;
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+/* ANIMATE OUT */
+@keyframes hideLeft {
+  0% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+
+  100% {
+    clip-path: inset(0 0 0 100%);
+    opacity: 1;
+  }
 }

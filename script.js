@@ -11,10 +11,41 @@ function runAnimationIN() {
   // Re-run animations
   logo.style.animation = "revealLeft 0.5s linear forwards";
   goldBar.style.animation = "slideIn 0.5s ease-in-out forwards 0.1s";
-  blackBar.style.animation = "slideIn 0.5s ease-in-out forwards 0.1s";
+  blackBar.style.animation = "slideIn 0.5s ease-in-out forwards 0.2s";
   bottomBar.style.animation = "slideDownBottom 0.6s ease-in-out forwards 0.2s";
   topBar.style.animation = "slideUpTop 0.5s ease-in forwards 0.2s";
 }
+
+function runAnimationOUT() {
+  // SET clip-path to match end of animation in
+  goldBar.style.clipPath = "polygon(15px 0, 100% 0, 100% 100%, 0% 100%)";
+  blackBar.style.clipPath = "polygon(15px 0, 100% 0, 100% 100%, 0% 100%)";
+
+  // Re-run animations
+  logo.style.animation = "hideLeft 0.5s linear forwards";
+  goldBar.style.animation = "slideOut 0.4s ease-in-out forwards 0.3s";
+  blackBar.style.animation = "slideOut 0.4s ease-in-out forwards 0.2s";
+  bottomBar.style.animation = "slideUpBottom 0.3s ease-in forwards";
+  topBar.style.animation = "slideDownTop 0.3s ease-in forwards";
+}
+
+// KEYBOARD shortcut to TOGGLE animations
+let isGraphicVisible = true;
+
+window.addEventListener("keydown", (event) => {
+  event.preventDefault();
+
+  // Check if the pressed key code is 'Space' for spacebar
+  if(event.code === "Space") {
+    if(isGraphicVisible) {
+      runAnimationOUT();
+      isGraphicVisible = false;
+    } else {
+      location.reload();
+      isGraphicVisible = true;
+    }
+  }
+});
 
 // ON LOAD: adjust bar width
 window.onload = () => adjustBarWidth();
